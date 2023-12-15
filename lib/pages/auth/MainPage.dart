@@ -64,37 +64,38 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             // 商品一覧
-            SafeArea(
-              child: ListView(
-                children: [
-                  Column(
+            Padding(
+              padding: const EdgeInsets.only(top: 40),
+              child: ListView.separated(
+                itemCount: products.length,
+                scrollDirection: Axis.vertical,
+                separatorBuilder: (context, index) => SizedBox(height: 0),
+                itemBuilder: (context, index) {
+                  return Stack(
                     children: [
-                      Row(
-                        children: [
-                          // 商品カード
-                          Padding(
-                            padding: const EdgeInsets.only(top: 40, left: 15),
-                            child: ProductBox(
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Row(
+                          children: [
+                            // 商品カード
+                            ProductBox(
                               width: 170.0,
-                              height: 250.0,
+                              height: 220.0,
                               child: null,
                             ),
-                          ),
-                          Spacer(),
-                          // 商品カード
-                          Padding(
-                            padding: const EdgeInsets.only(top: 40, right: 15),
-                            child: ProductBox(
+                            Spacer(),
+                            // 商品カード
+                            ProductBox(
                               width: 170.0,
-                              height: 250.0,
+                              height: 220.0,
                               child: null,
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ],
-                  ),
-                ],
+                  );
+                },
               ),
             ),
           ],
