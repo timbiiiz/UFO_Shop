@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables, file_names
 
 import 'package:flutter/material.dart';
-import 'package:ufoapp/utils/product_box.dart';
+import 'package:ufoapp/utils/glass_box.dart';
 import 'package:ufoapp/models/product_model.dart';
 import 'package:ufoapp/widgets/custom_drower_widget.dart';
 
@@ -66,8 +66,9 @@ class _MainPageState extends State<MainPage> {
             // 商品一覧
             Padding(
               padding: const EdgeInsets.only(top: 40),
+              // 商品をリスト化して表示
               child: ListView.separated(
-                itemCount: products.length,
+                itemCount: products.length, // product_modelの個数を取得
                 scrollDirection: Axis.vertical,
                 separatorBuilder: (context, index) => SizedBox(height: 0),
                 itemBuilder: (context, index) {
@@ -78,14 +79,14 @@ class _MainPageState extends State<MainPage> {
                         child: Row(
                           children: [
                             // 商品カード
-                            ProductBox(
+                            GlassBox(
                               width: 170.0,
                               height: 220.0,
                               child: null,
                             ),
                             Spacer(),
                             // 商品カード
-                            ProductBox(
+                            GlassBox(
                               width: 170.0,
                               height: 220.0,
                               child: null,
