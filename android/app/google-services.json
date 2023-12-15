@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "323178767740",
+    "project_id": "ufoapp-11b58",
+    "storage_bucket": "ufoapp-11b58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323178767740:android:50012b435dc25b3674b0f9",
+        "android_client_info": {
+          "package_name": "com.example.ufoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323178767740-lfkguhj8q53snagua8ca5nhfu6hqgvn6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ufoapp",
+            "certificate_hash": "e28b5f733737f28c389fc419bf8527c22aff4150"
+          }
+        },
+        {
+          "client_id": "323178767740-2njmkka345sa19kjnmo5qsq7bmucadrc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAulM6S-nSqflQ8OmkeGgoxohU9IQxT_Zw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323178767740-2njmkka345sa19kjnmo5qsq7bmucadrc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "323178767740-36hjc8srbr36o8gkbb13eh2b20leffqb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ufoapp.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

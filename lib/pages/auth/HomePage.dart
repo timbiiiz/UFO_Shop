@@ -1,7 +1,10 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, sized_box_for_whitespace, file_names
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, sized_box_for_whitespace, file_names, unused_import
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ufoapp/pages/ProductPage.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:ufoapp/pages/auth/LoginPage.dart';
+import 'package:ufoapp/pages/auth/SignupPage.dart';
+import 'package:ufoapp/controllers/google_sign_in_controller.dart';
 import 'package:ufoapp/utils/detail_button.dart';
 import 'package:ufoapp/utils/glass_box.dart';
 
@@ -87,11 +90,12 @@ class HomePage extends StatelessWidget {
                       Stack(
                         children: [
                           // ガラスカード(glass_box.dart)
-                          Container(
-                            child: Center(
-                              child: GlassBox(
-                                height: 220.0, // double 小数点つけないとエラーなる
-                                width: 330.0, // 上記と同じ
+                          Center(
+                            child: GlassBox(
+                              height: 220.0, // double 小数点つけないとエラーなる
+                              width: 320.0, // 上記と同じ
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 80),
                                 child: Text(
                                   'Metaric UFO nano',
                                   style: TextStyle(
@@ -100,14 +104,13 @@ class HomePage extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                              ), //glass_box.dart
+                              ),
                             ),
                           ),
-
                           // ufo99994番　画像
                           Center(
                             child: Padding(
-                              padding: const EdgeInsets.only(top: 28),
+                              padding: const EdgeInsets.only(top: 20),
                               child: Container(
                                 width: 250,
                                 child:
@@ -115,11 +118,10 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                           ),
-
                           // ￥5,000,000
-                          Padding(
-                            padding: const EdgeInsets.only(top: 170),
-                            child: Center(
+                          Center(
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 170),
                               child: Text(
                                 '￥5,000,000',
                                 style: TextStyle(
@@ -132,52 +134,48 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
-
-                      SizedBox(height: 80),
-
-                      // 商品詳細ボタン
-                      GestureDetector(
-                        onTap: () {
-                          Get.offAll(() => ProductsPage()); // ProductsPage()に遷移
-                        },
-                        child: Stack(
-                          children: [
-                            Center(
-                              child: Container(
-                                child: DetailButton(
-                                  height: 35.0,
-                                  width: 130.0,
-                                ),
-                              ),
-                            ),
-                            Center(
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 8, right: 10),
-                                child: Text(
-                                  'enter',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Center(
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 6, left: 40),
-                                child: Icon(
-                                  Icons.arrow_right,
-                                  color: Colors.black54,
-                                  size: 25,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
                     ],
+                  ),
+                  SizedBox(height: 80),
+                  /* enter ボタン */
+                  GestureDetector(
+                    onTap: () {
+                      Get.offAll(() => LoginPage());
+                    },
+                    child: Stack(
+                      children: [
+                        Center(
+                          child: Container(
+                            child: DetailButton(
+                              height: 35.0,
+                              width: 130.0,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 8, right: 10),
+                            child: Text(
+                              'enter',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Center(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 6, left: 40),
+                            child: Icon(
+                              Icons.arrow_right,
+                              color: Colors.black54,
+                              size: 25,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
