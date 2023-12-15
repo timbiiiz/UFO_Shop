@@ -1,18 +1,22 @@
-// ignore_for_file: unused_local_variable, unused_field, avoid_print
+// ignore_for_file: avoid_print, unused_local_variable
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:ufoapp/controllers/get_device_token_controller.dart';
 import 'package:ufoapp/models/user_model.dart';
-import 'package:ufoapp/pages/ProductPage.dart';
+import 'package:ufoapp/pages/auth/MainPage.dart';
 
 class GoogleSignInController extends GetxController {
   final GoogleSignIn googleSignIn = GoogleSignIn();
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   Future<void> signInWithGoogle() async {
+    final GetDeviceTokenController getDeviceTokenController =
+        Get.put(GetDeviceTokenController());
+
     try {
       final GoogleSignInAccount? googleSignInAccount =
           await googleSignIn.signIn();
@@ -39,13 +43,14 @@ class GoogleSignInController extends GetxController {
             email: user.email.toString(),
             phone: user.phoneNumber.toString(),
             userImg: user.photoURL.toString(),
-            userDeviceToken: '',
+            userDeviceToken: getDeviceTokenController.deviceToken.toString(),
             country: '',
             userAddress: '',
             street: '',
             isAdmin: false,
             isActive: true,
             createOn: DateTime.now(),
+            city: '',
           );
 
           await FirebaseFirestore.instance
@@ -53,7 +58,7 @@ class GoogleSignInController extends GetxController {
               .doc(user.uid)
               .set(userModel.toMap());
           EasyLoading.dismiss();
-          Get.offAll(() => const ProductsPage());
+          Get.offAll(() => const MainPage());
         }
       }
     } catch (e) {

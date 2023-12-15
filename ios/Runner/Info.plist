@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<!-- なんかflutterのバグが起きてるらしい(*これ書いたら一応動く)
-	<key>FLTEnableImpeller</key>
-	<false />
-	until here -->
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -49,5 +45,19 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<!-- iosでgoogleログイン認証できるようにする -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				 <!-- GoogleService-info.plistのREVERCED_CLIENT_IDのとこ -->
+				<string>com.googleusercontent.apps.323178767740-k6cu290q29dnl0u88v06v127oi50kob2</string> 
+			</array>
+		</dict>
+	</array>
+	<!-- til here -->
 </dict>
 </plist>

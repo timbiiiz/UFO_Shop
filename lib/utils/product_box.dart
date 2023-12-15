@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 final _boderRadius = BorderRadius.circular(20);
 
 class ProductBox extends StatelessWidget {
-  final height;
   final width;
+  final height;
   final child;
 
   const ProductBox({
     super.key,
-    required this.height,
     required this.width,
+    required this.height,
     required this.child,
   });
 
@@ -20,15 +20,13 @@ class ProductBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Center(
-          child: ClipRRect(
-            borderRadius: _boderRadius,
-            child: Container(
-              color: Colors.white,
-              width: width,
-              height: width,
-              child: child,
-            ),
+        ClipRRect(
+          borderRadius: _boderRadius,
+          child: Container(
+            color: Colors.white54,
+            width: width,
+            height: height,
+            child: child,
           ),
         ),
       ],

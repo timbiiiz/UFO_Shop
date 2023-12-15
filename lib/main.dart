@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:ufoapp/auth/LoginPage.dart';
-import 'package:ufoapp/auth/SignupPage.dart';
+import 'package:ufoapp/pages/auth/HomePage.dart';
+import 'package:ufoapp/pages/auth/MainPage.dart';
+import 'package:ufoapp/pages/auth/WelcomePage.dart';
 import 'firebase_options.dart';
 import 'package:get/get.dart';
-// import 'package:ufoapp/auth/LoginPage.dart';
-// import 'package:ufoapp/pages/WelcomePage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginPage(),
+      home: const HomePage(),
       builder: EasyLoading.init(),
     );
   }
