@@ -1,7 +1,10 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, no_leading_underscores_for_local_identifiers, sort_child_properties_last
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:ufoapp/pages/auth/LoginPage.dart';
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({super.key});
@@ -30,10 +33,19 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                   const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
               child: ListTile(
                 titleAlignment: ListTileTitleAlignment.center,
-                title: Text('Wrais'),
-                subtitle: Text('Version 1.0.1'),
+                title: Text(
+                  'Wrais',
+                  style: TextStyle(color: Colors.white),
+                ),
+                subtitle: Text(
+                  'Version 1.0.1',
+                  style: TextStyle(color: Colors.white),
+                ),
                 leading: CircleAvatar(
-                  child: Text('W'),
+                  child: Text(
+                    'W',
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ),
               ),
             ),
@@ -44,17 +56,83 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               thickness: 1.5, // 線の太さ
               color: Colors.grey, // 横線の色
             ),
+            // Home icon
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: ListTile(
                 titleAlignment: ListTileTitleAlignment.center,
-                title: Text('Home'),
-                leading: Icon(Icons.home),
-                trailing: Icon(Icons.arrow_forward),
+                title: Text(
+                  'ホーム',
+                  style: TextStyle(color: Colors.white),
+                ),
+                leading: Icon(Icons.home, color: Colors.white),
+                trailing: Icon(Icons.arrow_forward, color: Colors.white),
+              ),
+            ),
+            // 商品アイコン
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: ListTile(
+                titleAlignment: ListTileTitleAlignment.center,
+                title: Text(
+                  '商品',
+                  style: TextStyle(color: Colors.white),
+                ),
+                leading:
+                    Icon(Icons.production_quantity_limits, color: Colors.white),
+                trailing: Icon(Icons.arrow_forward, color: Colors.white),
+              ),
+            ),
+            // カートアイコン
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: ListTile(
+                titleAlignment: ListTileTitleAlignment.center,
+                title: Text(
+                  'カート',
+                  style: TextStyle(color: Colors.white),
+                ),
+                leading: Icon(Icons.shopping_bag, color: Colors.white),
+                trailing: Icon(Icons.arrow_forward, color: Colors.white),
+              ),
+            ),
+            // お問い合わせアイコン
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: ListTile(
+                titleAlignment: ListTileTitleAlignment.center,
+                title: Text(
+                  'お問い合わせ',
+                  style: TextStyle(color: Colors.white),
+                ),
+                leading: Icon(Icons.help, color: Colors.white),
+                trailing: Icon(Icons.arrow_forward, color: Colors.white),
+              ),
+            ),
+            // ログアウトアイコン
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: ListTile(
+                // ログアウト機能
+                onTap: () async {
+                  GoogleSignIn googleSignIn = GoogleSignIn();
+                  FirebaseAuth _auth = FirebaseAuth.instance;
+                  await _auth.signOut();
+                  await googleSignIn.signOut();
+                  Get.offAll(() => LoginPage());
+                },
+                titleAlignment: ListTileTitleAlignment.center,
+                title: Text(
+                  'ログアウト',
+                  style: TextStyle(color: Colors.white),
+                ),
+                leading: Icon(Icons.logout, color: Colors.white),
+                trailing: Icon(Icons.arrow_forward, color: Colors.white),
               ),
             ),
           ],
         ),
+        backgroundColor: Colors.black87,
       ),
     );
   }

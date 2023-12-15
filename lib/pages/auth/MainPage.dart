@@ -1,11 +1,6 @@
-// ignore_for_file: file_names, unused_import, prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, no_leading_underscores_for_local_identifiers, sized_box_for_whitespace
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables, file_names
 
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:ufoapp/pages/auth/LoginPage.dart';
 import 'package:ufoapp/utils/product_box.dart';
 import 'package:ufoapp/models/product_model.dart';
 import 'package:ufoapp/widgets/custom_drower_widget.dart';
@@ -45,23 +40,6 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
         ),
-        /* 右にログアウトアイコン設置 */
-        actions: [
-          // ログアウト機能
-          GestureDetector(
-            onTap: () async {
-              GoogleSignIn googleSignIn = GoogleSignIn();
-              FirebaseAuth _auth = FirebaseAuth.instance;
-              await _auth.signOut();
-              await googleSignIn.signOut();
-              Get.offAll(() => LoginPage());
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Icon(Icons.logout, size: 25, color: Colors.white),
-            ),
-          ),
-        ],
         // ドロワーの色
         iconTheme: IconThemeData(color: Colors.white),
       ),
