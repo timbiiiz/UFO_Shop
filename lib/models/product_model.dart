@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 
 import "package:flutter/material.dart";
+import "package:get/get.dart";
 
 class ProductModel {
   // 変数（フィールド）を宣言
@@ -23,56 +24,56 @@ class ProductModel {
 
     // Alminium UFO Basic
     products.add(ProductModel(
-      name: 'Alminium UFO Basic',
+      name: 'Alminium UFO B',
       iconPath: 'assets/images/ufo99991.png',
-      price: '￥2,000,000',
+      price: '       ￥2,000,000',
       detail: '安定した性能で空の旅を快適にしてくれる、ベーシックな機体です。',
       speed: '100Sl/h',
     ));
 
-    // Alminium UFO Basic
+    // Alminium UFO Confy
     products.add(ProductModel(
-      name: 'Alminium UFO Continental',
+      name: 'Alminium UFO C',
       iconPath: 'assets/images/ufo99992.png',
-      price: '￥3,000,000',
+      price: '       ￥3,000,000',
       detail: 'イエローエネルギーで光る、快適な機体です。',
       speed: '280Sl/h',
     ));
 
-    // Alminium UFO Basic
+    // Chitanium UFO Basic
     products.add(ProductModel(
-      name: 'Metaric UFO Continental',
+      name: 'Chitanium UFO B',
       iconPath: 'assets/images/ufo99993.png',
-      price: '￥4,000,000',
-      detail: '上質なメタリック加工を施し、イエローエネルギーで光る快適な機体です。',
+      price: '        ￥4,000,000',
+      detail: '上質なチタニウム加工を施し、イエローエネルギーで光る快適な機体です。',
       speed: '300Sl/h',
     ));
 
-    // Metaric UFO nano
+    // Chitanium UFO Confy
     products.add(ProductModel(
-      name: 'Metaric UFO nano',
+      name: 'Chitanium UFO C',
       iconPath: 'assets/images/ufo99994.png',
-      price: '￥5,000,000',
-      detail: '上質なメタリック加工を施し、重厚感のあるデザインの機体です。',
-      speed: '300Sl/h',
+      price: '       ￥5,000,000',
+      detail: '上質なチタニウム加工を施し、軽量化に成功しながら衝撃からも身を守れる快適な機体です。',
+      speed: '400Sl/h',
     ));
 
-    // UFO RS hydrogen
+    // UFORs hydrogen
     products.add(ProductModel(
-      name: 'UFO RS hydrogen',
+      name: 'UFORs hydrogen',
       iconPath: 'assets/images/ufo99995.png',
-      price: '￥10,000,000',
-      detail: 'コンパクトな作りで機体を軽量化して加速力を上げ、最高のレースを楽しめる機体です。',
-      speed: '860Sl/h',
+      price: '        ￥8,000,000',
+      detail: '機体を必要できる限り軽量化し、水素を採用した、光速な機体です。',
+      speed: '1200Sl/h',
     ));
 
-    // UFO R grande
+    //　Chitanium UFO Continental hydro
     products.add(ProductModel(
-      name: 'UFO R grande',
+      name: '    UFO C hydro',
       iconPath: 'assets/images/ufo99996.png',
-      price: '￥12,000,000',
-      detail: '質と快適さにこだわった、エレガントな機体です。',
-      speed: '800Sl/h',
+      price: '       ￥11,000,000',
+      detail: '機体を軽量化し耐久性能向上。水素を採用した、光速で快適な機体です。',
+      speed: '1000Sl/h',
     ));
 
     return products;

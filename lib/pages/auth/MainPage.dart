@@ -1,7 +1,7 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables, file_names
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables, file_names, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import 'package:ufoapp/utils/glass_box.dart';
+import 'package:ufoapp/models/product_items.dart';
 import 'package:ufoapp/models/product_model.dart';
 import 'package:ufoapp/widgets/custom_drower_widget.dart';
 
@@ -64,40 +64,84 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             // 商品一覧
-            Padding(
-              padding: const EdgeInsets.only(top: 40),
-              // 商品をリスト化して表示
-              child: ListView.separated(
-                itemCount: products.length, // product_modelの個数を取得
-                scrollDirection: Axis.vertical,
-                separatorBuilder: (context, index) => SizedBox(height: 0),
-                itemBuilder: (context, index) {
-                  return Stack(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Row(
-                          children: [
-                            // 商品カード
-                            GlassBox(
-                              width: 170.0,
-                              height: 220.0,
-                              child: null,
-                            ),
-                            Spacer(),
-                            // 商品カード
-                            GlassBox(
-                              width: 170.0,
-                              height: 220.0,
-                              child: null,
-                            ),
-                          ],
-                        ),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    // Alminium UFO Basic
+                    Container(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: ProductItem(
+                            iconPath: 'assets/images/ufo99991.png',
+                            name: 'Alminium UFO B',
+                            price: '       ￥2,000,000'),
                       ),
-                    ],
-                  );
-                },
-              ),
+                    ),
+                    // Alminium UFO Confy
+                    Container(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: ProductItem(
+                            iconPath: 'assets/images/ufo99992.png',
+                            name: 'Alminium UFO C',
+                            price: '       ￥3,000,000'),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    // Chitanium UFO Basic
+                    Container(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: ProductItem(
+                            iconPath: 'assets/images/ufo99993.png',
+                            name: 'Chitanium UFO B',
+                            price: '        ￥4,000,000'),
+                      ),
+                    ),
+                    // Chitanium UFO Confy
+                    Container(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: ProductItem(
+                            iconPath: 'assets/images/ufo99994.png',
+                            name: 'Chitanium UFO C',
+                            price: '       ￥5,000,000'),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    // UFORs hydrogen
+                    Container(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: ProductItem(
+                            iconPath: 'assets/images/ufo99995.png',
+                            name: 'UFORs hydrogen',
+                            price: '        ￥8,000,000'),
+                      ),
+                    ),
+                    // UFOC hydrogen
+                    Container(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: ProductItem(
+                            iconPath: 'assets/images/ufo99996.png',
+                            name: ' UFOC hydrogen',
+                            price: '       ￥11,000,000'),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ],
         ),
