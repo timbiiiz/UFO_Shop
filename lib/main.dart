@@ -1,12 +1,7 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ufoapp/pages/auth/HomePage.dart';
-import 'package:ufoapp/pages/auth/MainPage.dart';
-import 'package:ufoapp/pages/auth/WelcomePage.dart';
 import 'firebase_options.dart';
 import 'package:get/get.dart';
 

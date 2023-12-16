@@ -113,7 +113,7 @@ class _ChitaniumUFOCState extends State<ChitaniumUFOC> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 60),
+                  SizedBox(height: 70),
                   // カート
                   Stack(
                     children: [
