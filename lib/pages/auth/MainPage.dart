@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ufoapp/models/product_items.dart';
-import 'package:ufoapp/models/product_model.dart';
 import 'package:ufoapp/pages/products/Alminium_UFO_B.dart';
 import 'package:ufoapp/pages/products/Alminium_UFO_C.dart';
 import 'package:ufoapp/pages/products/Chitanium_UFO_B.dart';
@@ -20,18 +19,8 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  // product_model class 呼び出し
-  List<ProductModel> products = [];
-
-  // _getInitialInfo()するとモデルを一括管理できる(初期化された情報を受け取る。よくわからん、後で調べる)
-  void _getInitialInfo() {
-    products = ProductModel.getProducts(); // 中身使い方 e.g.-> products[index].name
-  }
-
   @override
   Widget build(BuildContext context) {
-    _getInitialInfo(); // 呼び出し
-
     return Scaffold(
       backgroundColor: Colors.black12,
       appBar: AppBar(
@@ -138,7 +127,7 @@ class _MainPageState extends State<MainPage> {
                     Container(
                       child: GestureDetector(
                         onTap: () {
-                          Get.to(() => UFOCHydro());
+                          Get.to(() => UFORsHydrogen());
                         },
                         child: ProductItem(
                             iconPath: 'assets/images/ufo99995.png',
@@ -150,7 +139,7 @@ class _MainPageState extends State<MainPage> {
                     Container(
                       child: GestureDetector(
                         onTap: () {
-                          Get.to(() => UFORsHydrogen());
+                          Get.to(() => UFOCHydro());
                         },
                         child: ProductItem(
                             iconPath: 'assets/images/ufo99996.png',
