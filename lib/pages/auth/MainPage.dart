@@ -1,8 +1,15 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables, file_names, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ufoapp/models/product_items.dart';
 import 'package:ufoapp/models/product_model.dart';
+import 'package:ufoapp/pages/products/Alminium_UFO_B.dart';
+import 'package:ufoapp/pages/products/Alminium_UFO_C.dart';
+import 'package:ufoapp/pages/products/Chitanium_UFO_B.dart';
+import 'package:ufoapp/pages/products/Chitanium_UFO_C.dart';
+import 'package:ufoapp/pages/products/UFORs_hydrogen.dart';
+import 'package:ufoapp/pages/products/UFO_C_hydro.dart';
 import 'package:ufoapp/widgets/custom_drower_widget.dart';
 
 class MainPage extends StatefulWidget {
@@ -72,7 +79,9 @@ class _MainPageState extends State<MainPage> {
                     // Alminium UFO Basic
                     Container(
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(() => AlminiumUFOB());
+                        },
                         child: ProductItem(
                             iconPath: 'assets/images/ufo99991.png',
                             name: 'Alminium UFO B',
@@ -82,7 +91,9 @@ class _MainPageState extends State<MainPage> {
                     // Alminium UFO Confy
                     Container(
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(() => AlminiumUFOC());
+                        },
                         child: ProductItem(
                             iconPath: 'assets/images/ufo99992.png',
                             name: 'Alminium UFO C',
@@ -97,7 +108,9 @@ class _MainPageState extends State<MainPage> {
                     // Chitanium UFO Basic
                     Container(
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(() => ChitaniumUFOB());
+                        },
                         child: ProductItem(
                             iconPath: 'assets/images/ufo99993.png',
                             name: 'Chitanium UFO B',
@@ -107,7 +120,9 @@ class _MainPageState extends State<MainPage> {
                     // Chitanium UFO Confy
                     Container(
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(() => ChitaniumUFOC());
+                        },
                         child: ProductItem(
                             iconPath: 'assets/images/ufo99994.png',
                             name: 'Chitanium UFO C',
@@ -122,7 +137,9 @@ class _MainPageState extends State<MainPage> {
                     // UFORs hydrogen
                     Container(
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(() => UFOCHydro());
+                        },
                         child: ProductItem(
                             iconPath: 'assets/images/ufo99995.png',
                             name: 'UFORs hydrogen',
@@ -132,7 +149,9 @@ class _MainPageState extends State<MainPage> {
                     // UFOC hydrogen
                     Container(
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(() => UFORsHydrogen());
+                        },
                         child: ProductItem(
                             iconPath: 'assets/images/ufo99996.png',
                             name: ' UFOC hydrogen',

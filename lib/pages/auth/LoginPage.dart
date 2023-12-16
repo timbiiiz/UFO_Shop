@@ -38,9 +38,9 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        /* 背景画像 */
         child: Stack(
           children: [
+            /* 背景画像 */
             Container(
               decoration: BoxDecoration(
                 color: Colors.black,
