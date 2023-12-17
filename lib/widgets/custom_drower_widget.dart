@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:ufoapp/pages/auth/LoginPage.dart';
+import 'package:ufoapp/pages/auth/MainPage.dart';
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({super.key});
@@ -57,30 +58,38 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               color: Colors.grey, // 横線の色
             ),
             // Home icon
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: ListTile(
-                titleAlignment: ListTileTitleAlignment.center,
-                title: Text(
-                  'ホーム',
-                  style: TextStyle(color: Colors.white),
+            GestureDetector(
+              onTap: () {},
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: ListTile(
+                  titleAlignment: ListTileTitleAlignment.center,
+                  title: Text(
+                    'ホーム',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  leading: Icon(Icons.home, color: Colors.white),
+                  trailing: Icon(Icons.arrow_forward, color: Colors.white),
                 ),
-                leading: Icon(Icons.home, color: Colors.white),
-                trailing: Icon(Icons.arrow_forward, color: Colors.white),
               ),
             ),
             // 商品アイコン
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: ListTile(
-                titleAlignment: ListTileTitleAlignment.center,
-                title: Text(
-                  '商品',
-                  style: TextStyle(color: Colors.white),
+            GestureDetector(
+              onTap: () {
+                Get.to(() => MainPage());
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: ListTile(
+                  titleAlignment: ListTileTitleAlignment.center,
+                  title: Text(
+                    '商品',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  leading: Icon(Icons.production_quantity_limits,
+                      color: Colors.white),
+                  trailing: Icon(Icons.arrow_forward, color: Colors.white),
                 ),
-                leading:
-                    Icon(Icons.production_quantity_limits, color: Colors.white),
-                trailing: Icon(Icons.arrow_forward, color: Colors.white),
               ),
             ),
             // カートアイコン

@@ -113,26 +113,35 @@ class _UFORsHydrogenState extends State<UFORsHydrogen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 60),
+                  SizedBox(height: 50),
                   // カート
-                  Stack(
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Container(
-                          color: Colors.white,
+                  GestureDetector(
+                    onTap: () {},
+                    child: Stack(
+                      children: [
+                        // Card()でelevationを使ってwidgetを浮かせる
+                        Container(
                           width: 200,
-                          height: 40,
-                          child: Center(
+                          height: 50,
+                          child: Card(
+                            elevation: 50.0, // 浮かせる大きさ
+                            color: Colors.grey.shade800,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Container(
-                                  child: Text(
-                                    'カートに入れる',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      'カートに入れる',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -140,15 +149,16 @@ class _UFORsHydrogenState extends State<UFORsHydrogen> {
                                 Container(
                                   child: Icon(
                                     Icons.add_shopping_cart,
-                                    color: Colors.black,
+                                    color: Colors.white,
+                                    size: 20,
                                   ),
                                 ),
                               ],
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),
