@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ufoapp/models/product_items.dart';
+import 'package:ufoapp/pages/auth/CartPage.dart';
 import 'package:ufoapp/pages/products/Alminium_UFO_B.dart';
 import 'package:ufoapp/pages/products/Alminium_UFO_C.dart';
 import 'package:ufoapp/pages/products/Chitanium_UFO_B.dart';
@@ -38,6 +39,18 @@ class _MainPageState extends State<MainPage> {
         ),
         // ドロワーの色
         iconTheme: IconThemeData(color: Colors.white),
+        // 右にカートを配置
+        actions: [
+          GestureDetector(
+            onTap: () {
+              Get.to(() => CartPage());
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Icon(Icons.shopping_cart, color: Colors.white),
+            ),
+          ),
+        ],
       ),
       // 左側にドロワーウィジェット
       drawer: DrawerWidget(),
