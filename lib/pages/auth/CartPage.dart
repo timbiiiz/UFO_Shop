@@ -30,7 +30,7 @@ class _CartPageState extends State<CartPage> {
                 child: ListTile(
                   leading: CircleAvatar(
                     backgroundColor: Colors.white,
-                    child: Text('N', style: TextStyle(color: Colors.black)),
+                    child: Text('U', style: TextStyle(color: Colors.black)),
                   ),
                   title: Text(
                     'UFO Products',
