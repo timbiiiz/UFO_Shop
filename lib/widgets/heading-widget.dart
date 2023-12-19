@@ -24,29 +24,26 @@ class HeadingWidget extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    headingTitle,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 19,
-                      color: Colors.white,
-                    ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  headingTitle,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 19,
+                    color: Colors.white,
                   ),
-                  Text(
-                    headingSubTitle,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 13.0,
-                      color: Colors.white,
-                    ),
+                ),
+                Text(
+                  headingSubTitle,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 13.0,
+                    color: Colors.white,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             GestureDetector(
               onTap: onTap,
