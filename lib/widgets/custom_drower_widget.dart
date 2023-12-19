@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:ufoapp/pages/auth/LoginPage.dart';
-import 'package:ufoapp/pages/auth/MainPage.dart';
+import 'package:ufoapp/pages/auth/ProductPage.dart';
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({super.key});
@@ -76,7 +76,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             // 商品アイコン
             GestureDetector(
               onTap: () {
-                Get.to(() => MainPage());
+                Get.to(() => ProductPage());
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),

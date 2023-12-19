@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ufoapp/pages/auth/MainPage.dart';
+import 'package:ufoapp/pages/auth/ProductPage.dart';
 
 class UFOCHydro extends StatefulWidget {
   const UFOCHydro({super.key});
@@ -20,7 +20,7 @@ class _UFOCHydroState extends State<UFOCHydro> {
         backgroundColor: Colors.black,
         leading: GestureDetector(
           onTap: () {
-            Get.offAll(() => MainPage());
+            Get.offAll(() => ProductPage());
           },
           child: Icon(Icons.arrow_back, color: Colors.white),
         ),

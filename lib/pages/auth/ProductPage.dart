@@ -12,14 +12,14 @@ import 'package:ufoapp/pages/products/UFORs_hydrogen.dart';
 import 'package:ufoapp/pages/products/UFO_C_hydro.dart';
 import 'package:ufoapp/widgets/custom_drower_widget.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+class ProductPage extends StatefulWidget {
+  const ProductPage({super.key});
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<ProductPage> createState() => _ProductPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -11,7 +11,7 @@ import 'package:ufoapp/pages/auth/ForgetPasswordPage.dart';
 import 'package:ufoapp/pages/auth/SignupPage.dart';
 import 'package:ufoapp/controllers/Log_in_controller.dart';
 import 'package:ufoapp/controllers/google_sign_in_controller.dart';
-import 'package:ufoapp/pages/auth/MainPage.dart';
+import 'package:ufoapp/pages/auth/ProductPage.dart';
 import 'package:ufoapp/utils/glass_box.dart';
 
 class LoginPage extends StatefulWidget {
@@ -206,9 +206,9 @@ class _LoginPageState extends State<LoginPage> {
                                   // 管理者画面に遷移
                                   Get.offAll(() => AdminMainScreen());
 
-                                  // ログインに成功しなかったらMainPage()に遷移
+                                  // ログインに成功しなかったらProductPage()に遷移
                                 } else {
-                                  Get.offAll(() => MainPage());
+                                  Get.offAll(() => ProductPage());
                                   Get.snackbar(
                                     'ユーザーログイン成功',
                                     'ログインに成功しました',

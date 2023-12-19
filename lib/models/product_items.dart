@@ -6,6 +6,7 @@ class ProductItem extends StatelessWidget {
   final iconPath;
   final name;
   final price;
+  
   const ProductItem({
     super.key,
     required this.iconPath,
