@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:ufoapp/controllers/get_device_token_controller.dart';
 import 'package:ufoapp/models/user_model.dart';
-import 'package:ufoapp/pages/auth/ProductPage.dart';
+import 'package:ufoapp/pages/auth/MainPage.dart';
 
 class GoogleSignInController extends GetxController {
   final GoogleSignIn googleSignIn = GoogleSignIn();
@@ -58,7 +58,7 @@ class GoogleSignInController extends GetxController {
               .doc(user.uid)
               .set(userModel.toMap());
           EasyLoading.dismiss();
-          Get.offAll(() => const ProductPage());
+          Get.offAll(() => const MainPage());
         }
       }
     } catch (e) {

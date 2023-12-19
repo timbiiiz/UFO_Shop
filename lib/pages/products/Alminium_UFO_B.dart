@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ufoapp/pages/auth/ProductPage.dart';
+import 'package:ufoapp/pages/auth/MainPage.dart';
 
 class AlminiumUFOB extends StatefulWidget {
   const AlminiumUFOB({super.key});
@@ -20,7 +20,7 @@ class _AlminiumUFOBState extends State<AlminiumUFOB> {
         backgroundColor: Colors.black,
         leading: GestureDetector(
           onTap: () {
-            Get.offAll(() => ProductPage());
+            Get.offAll(() => MainPage());
           },
           child: Icon(Icons.arrow_back, color: Colors.white),
         ),

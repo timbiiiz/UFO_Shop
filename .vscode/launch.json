@@ -1,1 +1,10 @@
-{}
+{
+  "configurations": [
+    {
+      "name": "Flutter (lib/pages/auth/MainScreen.dart)",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/pages/auth/MainScreen.dart"
+    }
+  ]
+}

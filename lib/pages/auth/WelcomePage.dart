@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:ufoapp/controllers/get_user_data_controller.dart';
-import 'package:ufoapp/pages/auth/ProductPage.dart';
 import 'package:ufoapp/pages/admin_panel/admin_main_page.dart';
 import 'package:ufoapp/pages/auth/LoginPage.dart';
+import 'package:ufoapp/pages/auth/MainPage.dart';
 import 'package:ufoapp/pages/auth/SignupPage.dart';
 import 'package:ufoapp/pages/auth/HomePage.dart';
 
@@ -46,7 +46,7 @@ class _WelcomePageState extends State<WelcomePage> {
         Get.offAll(() => AdminMainScreen());
         // そうでない場合、ProductPage()に遷移
       } else {
-        Get.offAll(() => ProductPage());
+        Get.offAll(() => MainPage());
       }
       // userが無効だった場合、ログインされずWelcomePage()に遷移
     } else {
