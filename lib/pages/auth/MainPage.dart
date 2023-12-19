@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:ufoapp/pages/auth/CartPage.dart';
 import 'package:ufoapp/widgets/banner_widget.dart';
 import 'package:ufoapp/widgets/custom_drower_widget.dart';
+import 'package:ufoapp/widgets/heading-widget.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -77,6 +78,22 @@ class _MainPageState extends State<MainPage> {
                     ),
                     // banners
                     BannerWidget(),
+
+                    // heading widgets(Category case)
+                    HeadingWidget(
+                      headingTitle: 'カテゴリー',
+                      headingSubTitle: '最適な機体',
+                      onTap: () {},
+                      buttonText: 'もっと見る >',
+                    ),
+
+                    // heading widgets(flash sale case)
+                    HeadingWidget(
+                      headingTitle: 'セール中',
+                      headingSubTitle: 'お得な機体',
+                      onTap: () {},
+                      buttonText: 'もっと見る >',
+                    ),
                   ],
                 ),
               ),
